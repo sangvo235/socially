@@ -1,27 +1,35 @@
-import { Text, View, FlatList, Image } from 'react-native';
+import { Text, View, FlatList, Image, RefreshControl } from 'react-native';
 import { DUMMY_DATA } from '../../data/dummy';
+import EventItem from './event-item';
 
 const EventList = () => {
 
     const renderItem = ({item}) => {
-        return <Text>{item.title}</Text>
+        // return <EventItem id={item.id} title={item.title} description={item.description} />
+        return <View style={{padding: 40}}><Text>{item.title}</Text></View>
     }
 
     return (
     <View>
-        <Image
-            style={{width: 100, height: 75, marginTop: 20, marginBottom: 20}}
-            source={{ uri : href="https://i.gifer.com/bf6.gif"}}
-        />
 
-        <Text className="text-2xl pb-2">🔥 Trending Topics! 🔥
+        <Text className="text-3xl pt-12 pb-6 text-center font-semibold">🔥 Trending Topics! 🔥
         </Text>
 
-        <FlatList
+        <FlatList 
         data={DUMMY_DATA}
         keyExtractor={item => item.id}
-        renderItem={renderItem}            
-        />        
+        renderItem={renderItem}   
+        refreshControl= {
+            <RefreshControl
+                refreshing={false}
+                onRefresh={() => console.log('refreshing..')}
+            />   
+        }
+        />
+        <Image
+          style={{width: 120, height: 100, marginTop: 20, marginBottom: 20, marginLeft: 110}}
+          source={{ uri : href="https://i.gifer.com/bf6.gif"}}
+        />
     </View>
 
     );
