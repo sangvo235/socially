@@ -4,7 +4,7 @@ const EventScreen = () => {
 
     return (
         <View>
-            <Text>TBA - Account Screen</Text>
+            <Text>TBA - Event Screen</Text>
         </View>
 
     );

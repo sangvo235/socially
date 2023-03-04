@@ -10,10 +10,10 @@ const Stack = createStackNavigator();
 export const HomeStack = () => {
   return (
     <Stack.Navigator>
-      <Stack.Screen name="Home" component={HomeScreen} options={{headerShown: false}}/>
-      <Stack.Screen name="Trending" component={TrendingScreen} options={{headerShown: false}}/>
-      <Stack.Screen name="Events" component={EventScreen} options={{headerShown: false}}/>
-      <Stack.Screen name="Account" component={AccountScreen} options={{headerShown: false}}/>
+      <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="Trending" component={TrendingScreen} />
+      <Stack.Screen name="Event" component={EventScreen}/>
+      <Stack.Screen name="Account" component={AccountScreen}/>
     </Stack.Navigator>
   );
 }

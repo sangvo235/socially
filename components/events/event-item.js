@@ -1,14 +1,14 @@
-import { Text, TouchableOpacity, StyleSheet} from 'react-native';
+import { Text, TouchableOpacity, StyleSheet, View} from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 const EventItem = (id, title, description) => {
     const navigation = useNavigation();
 
     return (
-        <TouchableOpacity style={styles.card} onPress={() => navigation.navigate("Event", {eventId: id})}>
+        <View style={styles.card} onPress={() => navigation.navigate("Event", {eventId: id})}>
             <Text>{title}</Text>
             <Text>{description}</Text>
-        </TouchableOpacity>
+        </View>
 
     );
 }
@@ -16,7 +16,7 @@ const EventItem = (id, title, description) => {
 const styles = StyleSheet.create({
     card: {
         borderWidth: 1,
-        borderColor: '#c5c55',
+        borderColor: '#c5c5c5',
         borderRadius: 10,
         marginVertical: 5,
         padding: 30,
