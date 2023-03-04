@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import HomeScreen from '../screens/home-screen';
-import EventDetailScreen from '../screens/event-detail-screen';
+import AccountScreen from '../screens/account-screen';
 import TrendingScreen from '../screens/trending-screen';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
@@ -19,7 +19,7 @@ export const HomeTab = () => {
         else if (route.name === 'Trending') {
           iconName = focused ? 'fire-circle' : 'fire';
         }
-        else if (route.name === 'Event') {
+        else if (route.name === 'Account') {
           iconName = focused ? 'account-circle' : 'account-circle-outline';  
         }
 
@@ -33,7 +33,7 @@ export const HomeTab = () => {
     >
       <Tab.Screen name="Home" component={HomeScreen} options={{headerShown: false}}/>
       <Tab.Screen name="Trending" component={TrendingScreen} options={{headerShown: false}}/>
-      <Tab.Screen name="Event" component={EventDetailScreen} options={{headerShown: false}}/>
+      <Tab.Screen name="Account" component={AccountScreen} options={{headerShown: false}}/>
     </Tab.Navigator>
   );
 }

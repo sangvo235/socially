@@ -1,14 +1,14 @@
 import { View, Text } from 'react-native';
 
-const EventDetailScreen = () => {
+const EventScreen = () => {
 
     return (
         <View>
-            <Text>Event</Text>
+            <Text>TBA - Account Screen</Text>
         </View>
 
     );
 
 }
 
-export default EventDetailScreen;
+export default EventScreen;
