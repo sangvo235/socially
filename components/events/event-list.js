@@ -19,8 +19,8 @@ const EventList = () => {
         renderItem={renderItem}     
         />   
         <Image
-            style={{width: 105, height: 100, marginTop: 20, marginBottom: 20, marginLeft: 150}}
-            source={{ uri : href="https://i.gifer.com/bf6.gif"}}
+          style={{width: 120, height: 100, marginTop: 20, marginBottom: 20, marginLeft: 110}}
+          source={{ uri : href="https://i.gifer.com/bf6.gif"}}
         />
     </View>
 
