@@ -25,7 +25,7 @@ const HomeScreen = () => {
   
       <ScrollView>
       <View style={{backgroundColor: 'white', height: 1600, padding: 25}}>
-        <Text className="text-2xl pb-2">Lets Make It Social!</Text>
+        <Text className="text-2xl pb-2 font-semibold">Lets Make It Social!</Text>
       
         <View style={{ flexDirection: 'row', alignItems: 'center', backgroundColor: '#F5F5F5', borderWidth: 1, borderColor: 'black', padding: 10, borderRadius: 10, marginTop: 10, marginBottom: 10}}>
         <Feather name="search" size={20} color="black" style={{ marginLeft: 1, marginRight: 4}}/>
@@ -38,7 +38,13 @@ const HomeScreen = () => {
 
         <SearchFilter data={DUMMY_TWO_DATA} input={input} setInput={setInput}/>
 
-        <EventList />
+        {/* <EventList /> */}
+
+        <Image
+          style={{width: 120, height: 100, marginTop: 20, marginBottom: 20, marginLeft: 110}}
+          source={require('../assets/idea-gif.gif')}            
+        />
+
       </View>
   
       </ScrollView>
