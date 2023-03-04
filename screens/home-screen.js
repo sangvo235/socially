@@ -3,9 +3,13 @@ import { useState } from 'react';
 import { useNavigation } from '@react-navigation/native';
 import { StyleSheet, ScrollView, View, Text, SafeAreaView, Platform, TextInput, Button, Image } from 'react-native';
 import EventList from "../components/events/event-list";
+import { Feather } from '@expo/vector-icons';
+import SearchFilter from '../components/events/search-filter';
+import { DUMMY_TWO_DATA } from '../data/dummy-two';
 
 const HomeScreen = () => {
-    const [text, setText] = useState('');
+    const [input, setInput] = useState('');
+    console.log(input);
     const navigation = useNavigation();
 
     return (
@@ -23,12 +27,16 @@ const HomeScreen = () => {
       <View style={{backgroundColor: 'white', height: 1600, padding: 25}}>
         <Text className="text-2xl pb-2">Lets Make It Social!</Text>
       
-        <TextInput
-        defaultValue={text}
-        onChangeText={txt => {setText(txt)}}
-        style={{borderWidth: 1, borderColor: 'black', padding: 10}}
-        />
-        <Button className="rounded-full" title='click me' onPress={() => console.log("hi")}/>
+        <View style={{ flexDirection: 'row', alignItems: 'center', backgroundColor: '#F5F5F5', borderWidth: 1, borderColor: 'black', padding: 10, borderRadius: 10, marginTop: 10, marginBottom: 10}}>
+        <Feather name="search" size={20} color="black" style={{ marginLeft: 1, marginRight: 4}}/>
+        <TextInput 
+          value={input} 
+          onChangeText={(text) => setInput(text)} 
+          style={{ fontSize: 15 }} 
+          placeholder="Search for Topics" />
+        </View>
+
+        <SearchFilter data={DUMMY_TWO_DATA} input={input} setInput={setInput}/>
 
         <EventList />
       </View>
