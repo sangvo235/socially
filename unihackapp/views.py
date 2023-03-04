@@ -14,7 +14,7 @@ def index(request):
 # Rest api end point
 def get_rest_list(request):
     """
-    Returns Json list of all restaurants
+    Returns Json list of all Topics
     """
     if request.method == "GET":
         Topics_list = Topics.objects.order_by('id')
