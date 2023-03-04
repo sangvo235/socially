@@ -17,11 +17,12 @@ const EventList = () => {
         <Text className="text-2xl pb-2">🔥 Trending Topics! 🔥
         </Text>
 
-        <FlatList
+        <FlatList 
         data={DUMMY_DATA}
         keyExtractor={item => item.id}
-        renderItem={renderItem}            
-        />        
+        renderItem={renderItem}     
+        />   
+
     </View>
 
     );
