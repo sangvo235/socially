@@ -11,4 +11,4 @@
 - select either android, ios or web
 - have fun!!
 
-https://media.giphy.com/media/10AVDflAKRV86A/giphy.gif
+<iframe src="https://giphy.com/embed/10AVDflAKRV86A" width="286" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/dog-butterfly-10AVDflAKRV86A">via GIPHY</a></p>
