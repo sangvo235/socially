@@ -21,10 +21,12 @@ const EventScreen = () => {
     // }}
 
     return (
-        <View style={styles.screen}>
-            <Text style={{fontSize: 20}}>This is event detail screen for {eventId}</Text>
-            <Text style={{fontSize: 20}}>{title}</Text>
-            <Text style={{fontSize: 20}}>{description}</Text>
+        <View style={{backgroundColor: 'white', height: 1600, paddingLeft: 25, paddingRight: 25}}>            
+        <Text className="text-3xl pt-12 pb-6 text-center font-semibold bg-white">Start your conversation about {title} 😊</Text>
+            <View style={styles.card}>
+                {/* <Text style={{fontSize: 20}}>{title}</Text> */}
+                <Text style={{fontSize: 20}}>{description}</Text>
+            </View>
         </View>
 
     );
@@ -32,8 +34,13 @@ const EventScreen = () => {
 }
 
 const styles = StyleSheet.create({
-    screen: {
+    card: {
+        borderWidth: 1,
+        borderColor: '#c5c5c5',
+        borderRadius: 10,
+        marginVertical: 5,
         padding: 20,
+        marginTop: 30,
     }
 })
 

@@ -1,9 +1,20 @@
-import { useLayoutEffect } from 'react';
+import { useEffect, useLayoutEffect, useState } from 'react';
 import { Text, View, FlatList, Image, RefreshControl, SafeAreaView, StyleSheet } from 'react-native';
 import { DUMMY_DATA } from '../../data/dummy';
 import EventItem from './event-item';
 
 const EventList = () => {
+    // const [data, setData] = useState([])
+
+    // useEffect(() => { 
+    //     fetchData() 
+    // }, [])
+
+    // const fetchData = () => async () => {
+    //     const response = await fetch('http://127.0.0.1:8000/api/Topics/')
+    //     const data = await response.json()
+    //     SVGMetadataElement(data)
+    // }
 
     const renderItem = ({item}) => {
         return <EventItem id={item.id} title={item.title} description={item.description} />
@@ -17,6 +28,8 @@ const EventList = () => {
         keyExtractor={item => item.id}
         renderItem={renderItem}    
         />
+        {/* <EventList data={data} /> */}
+
     </View>
 
     );

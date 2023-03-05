@@ -6,8 +6,8 @@ const EventItem = ({id, title, description}) => {
 
     return (
         <TouchableOpacity style={styles.card} onPress={() => navigation.navigate("Event", {eventId: id, title, description})}>
-            <Text>{title}</Text>
-            <Text>{description}</Text>
+            <Text className="text-center">{title}</Text>
+            {/* <Text>{description}</Text> */}
         </TouchableOpacity>
 
     );

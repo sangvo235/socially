@@ -5,4 +5,5 @@ export const DUMMY_TWO_DATA = [
     {id: 4, name: 'Cats', description: 'Calico, Siamese, Tabby', description: 'test description Cats'},
     {id: 5, name: 'Pop Singers', description: 'Selena Gomez, Ariana Grande, Taylor Swift', description: 'test description Pop Singers'},
     {id: 6, name: 'Programming Languages', description: 'Python, Java, C++', description: 'test description Programming Languages'},
+    {id: 7, name: 'Sports', tags: 'Cricket, Football, Tennis', description: 'test description Sports'},
 ]
