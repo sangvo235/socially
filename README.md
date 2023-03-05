@@ -10,5 +10,3 @@
 - npm start 
 - select either android, ios or web
 - have fun!!
-
-<iframe src="https://giphy.com/embed/10AVDflAKRV86A" width="286" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/dog-butterfly-10AVDflAKRV86A">via GIPHY</a></p>
