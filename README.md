@@ -10,3 +10,5 @@
 - npm start 
 - select either android, ios or web
 - have fun!!
+
+https://media.giphy.com/media/10AVDflAKRV86A/giphy.gif
