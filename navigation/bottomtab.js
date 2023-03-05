@@ -21,8 +21,8 @@ export const HomeTab = () => {
         else if (route.name === 'Trending') {
           iconName = focused ? 'fire-circle' : 'fire';
         }
-        else if (route.name === 'Account') {
-          iconName = focused ? 'account-circle' : 'account-circle-outline';  
+        else if (route.name === 'Event') {
+          iconName = focused ? 'lightbulb-on' : 'lightbulb-outline';  
         }
 
         // Component Return
@@ -35,7 +35,7 @@ export const HomeTab = () => {
     >
       <Tab.Screen name="Home" component={HomeScreen} options={{headerShown: false}}/>
       <Tab.Screen name="Trending" component={TrendingScreen} options={{headerShown: false}}/>
-      <Tab.Screen name="Account" component={AccountScreen} options={{headerShown: false}}/>
+      {/* <Tab.Screen name="Account" component={AccountScreen} options={{headerShown: false}}/> */}
       <Tab.Screen name="Event" component={EventScreen} options={{headerShown: false}}/>
     </Tab.Navigator>
   );
