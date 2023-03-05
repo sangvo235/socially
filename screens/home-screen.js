@@ -9,8 +9,6 @@ import { DUMMY_TWO_DATA } from '../data/dummy-two';
 
 const HomeScreen = () => {
     const [input, setInput] = useState('');
-    console.log(input);
-    const navigation = useNavigation();
 
     return (
       <SafeAreaView>
@@ -20,9 +18,7 @@ const HomeScreen = () => {
         source={require('../assets/socially.png')}
       />
       </View>
-      {/* <Button title="Move to Details" onPress={() => navigation.navigate('Event')} /> */}
-      {/* <Text style={{fontSize: 24}}>{Platform.OS === 'android' ? 'android' : 'ios'}</Text> */}
-  
+
       <ScrollView>
       <View style={{backgroundColor: 'white', height: 1600, padding: 25}}>
         <Text className="text-2xl pb-2 font-semibold">Lets Make It Social!</Text>
@@ -37,8 +33,6 @@ const HomeScreen = () => {
         </View>
 
         <SearchFilter data={DUMMY_TWO_DATA} input={input} setInput={setInput}/>
-
-        {/* <EventList /> */}
 
         <Image
           style={{width: 120, height: 100, marginTop: 20, marginBottom: 20, marginLeft: 110}}
