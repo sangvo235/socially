@@ -2,6 +2,7 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from .models import Topics
 from .serializers import TopicsSerializer
+from rest_framework import viewsets
 from django.views.decorators.csrf import csrf_exempt
 
 
@@ -14,7 +15,7 @@ def index(request):
 # Rest api end point
 def get_rest_list(request):
     """
-    Returns Json list of all restaurants
+    Returns Json list of all Topics
     """
     if request.method == "GET":
         Topics_list = Topics.objects.order_by('id')
